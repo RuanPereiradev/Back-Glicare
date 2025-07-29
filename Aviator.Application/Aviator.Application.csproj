@@ -21,14 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Blogs\Commands\CreateBlog\" />
     <Folder Include="Blogs\Commands\DeleteBlog\" />
     <Folder Include="Blogs\Commands\UpdateBlog\" />
-    <Folder Include="Blogs\Queries\GetBlogById\" />
-    <Folder Include="Blogs\Queries\GetBlogs\" />
     <Folder Include="Common\Behaviator\" />
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Common\Mappings\" />
   </ItemGroup>
 
 </Project>
