@@ -21,8 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Blogs\Commands\DeleteBlog\" />
-    <Folder Include="Blogs\Commands\UpdateBlog\" />
     <Folder Include="Common\Behaviator\" />
     <Folder Include="Common\Exceptions\" />
   </ItemGroup>
