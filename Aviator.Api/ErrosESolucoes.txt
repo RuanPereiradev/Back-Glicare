@@ -1,0 +1,21 @@
+Resumo das Modificações para Resolver o Problema do SQLite
+Para resolver definitivamente o erro "no such table: Blogs", foram realizadas três alterações principais:
+
+Configuração do DbContext: No método AddInfrastructServices, adicionamos a especificação do assembly de migrações (b.MigrationsAssembly("Aviator.Infrastruct")) para garantir que o EF Core procure as migrações no projeto correto.
+
+Migração Automática: Incluímos no Program.cs (apenas para ambiente de desenvolvimento) um bloco que aplica automaticamente as migrações pendentes usando dbContext.Database.Migrate() durante a inicialização da aplicação.
+
+Configuração da Connection String: Verificamos que o appsettings.json contém a string de conexão correta apontando para "Data Source=CleanArchitecture.db".
+
+Estas alterações garantem que:
+
+As migrações sejam encontradas no assembly correto
+
+Sejam aplicadas automaticamente ao iniciar a aplicação em desenvolvimento
+
+O banco de dados seja criado no local esperado (pasta da API)
+
+A tabela Blogs seja criada conforme definido nas migrações
+
+O sistema agora mantém automaticamente o banco de dados atualizado com a estrutura definida no modelo.
+
